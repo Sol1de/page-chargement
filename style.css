@@ -38,10 +38,16 @@ h1 {
     text-align: center;
     transform: scale(0.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    color: #3d3d42;
+}
+
+h1.hidden {
+    display: none;
 }
 
 #logoAndButtonContainer {
     display: flex;
+    flex-wrap: wrap;
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -245,4 +251,28 @@ span:nth-child(18) {
     animation: fade-in 1.2s 3.5s forwards cubic-bezier(0.11, 0, 0.5, 0), fade-out 1.2s 6.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
     --x: 45px;
     --y: 35px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .logo-img {
+        width: 200px;
+    }
+    #restartButton {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .logo-img {
+        margin-right: 0;
+    }
 }

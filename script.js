@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     h1.addEventListener("animationend", function(event) {
         if (event.animationName === "fade-out") {
             setTimeout(function() {
+                h1.style.display = "none";
                 logoAndButtonContainer.classList.add("show");
             }, 1800);
         }
@@ -105,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const restartButton = document.getElementById("restartButton");
     restartButton.addEventListener("click", function() {
+
         logoAndButtonContainer.classList.remove("show");
         logoAndButtonContainer.classList.add("hidden");
     
